@@ -1,0 +1,27 @@
+{% load static %}
+
+
+<html>
+
+<head>
+    <title>Django blog</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400" rel="stylesheet">
+    <link rel="stylesheet" href=" {% static 'css/base.css' %}">
+</head>
+
+<body>
+    <header>
+        <div class="nav-left">
+            <hl><a href="/">Django blog</a></hl>
+        </div>
+        <div class="nav-right">
+            <a href=" {% url 'post_new' %}">+ New Blog Post</a>
+        </div>
+
+    </header>
+    <div class="container">
+        {% block content %} {% endblock content %}
+    </div>
+</body>
+
+</html>
