@@ -20,4 +20,5 @@ class Comment(models.Model):
     created_at = models.DateTimeField(default=datetime.now())
     def __str__ (self):
         return self.comment
-
+    def get_absolute_url(self):
+        return reverse("home")
